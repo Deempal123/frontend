@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration</title>
+    <script>
+        function validForm()
+        {
+            var n=document.getElementById("fname").value
+            var p=document.getElementById("pwd").value
+            var cp=document.getElementById("cpwd").value
+            if(n=="" || n==null || !isNaN(n))
+            {
+                alert("name must be filled")
+                return false
+            }
+            else if(p.length<6)
+            {
+                alert("password should be of minimum 6 character")
+                return false
+            }
+            else if(cp!=p)
+            {
+                alert("confirm password and password should be same")
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+<br><br>
+<form name="formv" onsubmit="return validForm()" style="margin:auto; width:350px; background-color:#DDF9FF; border-radius:10px;" action="registration.html" method="get">
+<br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="fname">Full Name</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="fname" name="fname" placeholder="first name">
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="birthday">Date of Birth</label>
+&nbsp;&nbsp;&nbsp;
+<input type="date" id="birthday" name="birthday">
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="gender">Gender</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" id="Female" name="gender" value="Female">Female
+<input type="radio" id="Male" name="gender" value="Male">Male
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="email">Email</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" id="email" name="email" placeholder="abcd@gmail.com">
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="phone">Phone No.</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="tel" id="phone" name="phone" maxlength="10" placeholder="8977666554">
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="address">Address</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" id="address" name="address" placeholder="address">
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="state">State</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<select id="state" name="state">
+      <option value="value" selected>Select</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+      <option value="Uttrakhand">Uttrakhand</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Assam">Assam</option>
+</select>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="city">City</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<select id="city" name="city">
+      <option value="value" selected>Select</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Pune">Pune</option>
+      <option value="Ludhiana">Ludhiana</option>
+      <option value="Haridwar">Haridwar</option>
+      <option value="Guwahati">Guwahati</option>
+</select>
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="pwd">Password</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="password" id="pwd" name="pwd" placeholder="create password">
+<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+<label for="pwd">Confirm Password</label>
+&nbsp;
+<input type="password" id="cpwd" name="cpwd" placeholder="retype password">
+<br><br><br><br>
+<center><input type="submit" value="submit"></center>
+<br><br>
+</form>
+</body>
+</html>
